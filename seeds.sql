@@ -22,10 +22,10 @@ VALUES  ('Salesman', 60000, 1),
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES  ('Bob', 'Nestler', 1, NULL),
-        ('Steve', 'Cook', 5, 1),
         ('Travis', 'Holmes', 2, NULL),
         ('Joshua', 'Abeyta', 3, NULL),
         ('Genesis', 'Gonzalez', 4, NULL),
+        ('Steve', 'Cook', 5, 1),
         ('Jan', 'Rodrigo', 6, NULL),
         ('Kate', 'Yuki', 7, NULL),
         ('Jose', 'Lara', 8, NULL),

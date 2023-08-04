@@ -2,9 +2,10 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const { printTable } = require('console-table-printer');
 
+const PORT = 3001;
+
 const connection = mysql.createConnection({
-  host: 'localhost',
-  port: 3306, // Changed the port to 3306 (default MySQL port)
+  host: '127.0.0.1',
   user: 'root',
   password: 'password',
   database: 'company_db',
@@ -299,4 +300,36 @@ const updateEmployeeRole = () => {
 };
 
 // Function to Delete a department (not provided in the code)
+const deleteDepartment = () => {
+  connection.query('SELECT id, name FROM department', (err, res) => {
+    if (err) throw err;
+
+    const departmentNames = res.reduce((acc, curr) => {
+      acc[curr.name] = curr.id;
+      return acc;
+    });
+
+    inquirer
+      .prompt([
+        {
+          name: 'department',
+          type: 'list',
+          message: 'Please select the department to delete',
+          choices: Object.keys(departmentNames),
+        },
+      ])
+      .then((answer) => {
+        const departmentID = departmentNames[answer.department];
+        connection.query(
+          'DELETE FROM department WHERE id = ?',
+          [departmentID],
+          (err, res) => {
+            if (err) throw err;
+            console.log(`Department "${answer.department}" successfully deleted!`);
+            startMenu();
+          }
+        );
+      });
+  });
+};
 

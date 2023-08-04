@@ -29,7 +29,7 @@ CREATE TABLE employee (
 -- Roles, employees, adds a department, add a role, add an employee, and update and employee role
 
 
-                            -- IMPLEMENT FUNCTIONS FOR :
+-- IMPLEMENT FUNCTIONS FOR :
 -- view all departments, fetch all departments from the database and display them in a table (console.table)
 -- view all roles, fetch all roles from database along with the corresponding department info and display on table
 -- view all employees, fetch all employees from database along with their role, department, salary, and manager infromation.
