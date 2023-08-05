@@ -61,7 +61,7 @@ const viewAllDepartments = () => {
 };
 
 // Function to view all roles
-// using table aliases e for employees and r for salary r for role 
+// using table aliases e for employees and r for salary r for role and 
 const viewAllRoles = () => {
   // Execute SQL query to retrieve roles with department information from the database
   connection.query(
