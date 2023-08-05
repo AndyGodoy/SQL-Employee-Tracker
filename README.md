@@ -59,3 +59,6 @@ UCB activities,
 Google,
 npm documents
 
+VIDEO:
+https://drive.google.com/file/d/1D_xwqnlnCTp1NLd8f5HG9NjAR-jOFww7/view
+file:///Users/andygodoy/Downloads/Untitled_%20Aug%204,%202023%2010_53%20PM.webm
